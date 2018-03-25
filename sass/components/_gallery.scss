@@ -1,0 +1,17 @@
+
+.gallery {
+  
+  &__hotel-pic-holder {
+    display: flex;
+    width: 100%;
+  }
+  
+  &__hotel-pic{
+    display: block;
+    height: 100%;
+    width: 33.33333%;
+    -webkit-object-fit: cover;
+    object-fit: cover;
+  }
+}
+

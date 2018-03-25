@@ -1,0 +1,29 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  box-shadow: var(--shadow-dark);
+
+  @include breakpoint(tab-port) {
+    margin: 0;
+  }
+
+}
+
+.bottom {
+  display: flex;
+
+  @include breakpoint(tab-port) {
+    flex-direction: column;
+  }
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback {
+  padding: 3rem;
+  background: var(--color-grey-light-2);
+  display: flex;
+}

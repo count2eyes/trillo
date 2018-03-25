@@ -1,0 +1,170 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  height: 7rem;
+  flex-basis: 100%;
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--line);
+
+  @include breakpoint(500px) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 13rem;
+  }
+
+  @include breakpoint(260px) {
+    height: 20rem;
+  }  
+
+  &__logo-div {
+    height: 7rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2.5rem;
+  }
+
+  &__logo {
+
+    height: 3.2rem;
+  }
+  
+  &__search {
+    height: 6rem;
+    width: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    
+    @include breakpoint(500px) {
+      order: 1;
+      width: 100%;
+    }
+
+  
+    &-text {
+      display: inline-block;
+      border-radius: 5rem;
+      color: inherit;
+      border: none;
+      width: 80%;
+      outline: none;
+      background: var(--color-grey-light-2);
+      height: 3.5rem;
+      padding-left: 2.5rem;
+      font-size: 1.6rem;
+      transition: all .5s;
+
+      @include breakpoint(500px) {
+        width: 100%;
+        border-radius: 0;
+        padding-left: 6rem;
+      }
+
+      &::-webkit-input-placeholder {
+        color: var(--color-grey-light-4);
+        font-size: 1.4rem;
+      }
+
+      &:focus {
+        width: 90%;
+
+        @include breakpoint(500px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  &__search-ico {
+    fill: var(--color-grey-dark-3);
+    height: 2rem;
+    width: 2rem;
+    margin-left: -4rem;
+
+  }
+  
+  &__user {
+    display: flex;
+    width: 20%;
+    height: 7rem;
+    //background: red;
+
+    & > *:hover {
+      background: var(--color-grey-light-3);
+    }
+
+    @include breakpoint(tab-port) {
+      width: 30vw;
+      justify-content: space-between;
+    }
+
+    @include breakpoint(500px) {
+      min-width: 150px;
+    }
+
+    @media only screen and (max-width: 260px) {
+      width: 100%;
+    }
+  }
+  
+  &__bookmarks,
+  &__chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    position: relative;
+  }
+  
+  &__user-ico {
+    fill: var(--color-grey-dark-2);
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  
+  &__count {
+    font-size: .8rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 50%;
+    background: var(--color-primary-light);
+    color: var(--color-grey-light-1);
+    position: absolute;
+    top: 25%;
+    left: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  &__profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+  }
+  
+  &__user-pic {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+  }
+  
+  &__user-name {
+    margin-left: 2rem;
+    font-size: 1.3rem;
+  }
+  
+}

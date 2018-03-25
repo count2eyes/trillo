@@ -1,0 +1,131 @@
+.hotel {
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-grey-light-1);
+  border-bottom: var(--line);
+
+    @media only screen and (max-width: 430px) {
+      height: 10rem;
+      flex-direction: column;
+    }
+  
+  
+  &__name {
+    display: flex;
+    align-items: center;
+    height: 7rem;
+
+
+    @media only screen and (max-width: 430px) {
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+  
+  &__name-text {
+    padding: 0 3rem;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 300;
+
+    @media only screen and (max-width: 430px) {
+      padding: 0;
+      height: 5rem;
+
+    }
+  }
+  
+  &__status {
+    display: flex;
+  }
+
+  
+  &__others {
+    height: 7rem;
+    display: flex;
+    
+    @media only screen and (max-width: 430px) {
+      width: 100%;
+      justify-content: space-around;
+      height: 5rem;
+
+    }
+
+  }  
+  
+  &__ico {
+    height: 1.7rem;
+    width: 1.7rem;
+    fill: var(--color-primary);
+  }
+  
+  &__on-map {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    
+  }
+
+  
+  &__on-map-text {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-primary-dark);
+      border-bottom: 1px solid var(--color-primary-dark);
+    }
+
+    &:focus{
+      animation: toggle-scale-on-clicked 1s infinite;
+    }
+  }
+
+  &__others-ico {
+    margin-right: .5rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    fill: var(--color-primary);
+  }
+  
+  &__rating {
+    padding: 0 2.5rem;
+    background: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+      @media only screen and (max-width: 430px) {
+        padding: 0;
+    }
+  }
+
+  &__rating-text--1,
+  &__rating-text--2 {
+    font-weight: 300;
+    color: var(--color-grey-light-2);
+
+    @media only screen and (max-width: 430px) {
+      font-size: 1.8rem;
+    }
+
+  }
+
+  &__rating-text--1 {
+    font-size: 2.2rem;
+
+  }
+
+  &__rating-text--2 {
+    font-size: .9rem;
+  }
+}
